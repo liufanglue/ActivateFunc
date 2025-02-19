@@ -47,6 +47,18 @@
 %result
 % | sigmod(x + y) | <= | sigmod(x) | + | sigmod(y) | succ, end
 
+% test | sigmod(x) - sigmod(y) | <= | sigmod(x - y) | begin
+
+%x1 = [-100 : 0.1 : 100]';
+%y1 = [-100 : 0.1 : 100]';
+%[x, y] = meshgrid(x1, y1);
+%z = abs(1 ./ (1 + exp(-x)) - 1./ (1 + exp(-y))) - abs(1 ./ (1 + exp(-(x - y))));
+%mesh(x, y, z)
+%pause;
+
+%result
+% | sigmod(x) - sigmod(y) | <= | sigmod(x - y) | almost succ, end
+
 % test sigmod curve status begin
 
 x = [-10 : 0.1 : 10];
