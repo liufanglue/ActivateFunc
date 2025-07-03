@@ -8,7 +8,7 @@
 %[m, n] = eig(b * b')
 
 %subplot(1, 1, 1)
-%f = @(x,y,z) x .^ 2 + y .^ 2 + z .^ 2 - 9;      % 函数表达式
+%f = @(x,y,z) x .^ 2 + y .^ 2 + z .^ 2 - 9;      % 函数表达�?
 %[x,y,z] = meshgrid(-10:.2:10,-10:.2:10,-10:.2:10);
 %v = f(x, y, z);
 %h = patch(isosurface(x, y, z, v, 0)); 
@@ -61,28 +61,28 @@
 
 % test sigmod curve status begin
 
-x = [-10 : 0.1 : 10];
+x = [-100 : 0.1 : 100];
 
-w = 0.01;
-y = 1 ./ (1 .+ exp(w * x));
+w = 10;
+y = 1 ./ (1 + exp(w * x));
 plot(x, y, 'r');
 hold on;
-
-w = 0.1;
-y = 1 ./ (1 .+ exp(w * x));
-plot(x, y, 'g');
-hold on;
-
-w = 5;
-y = 1 ./ (1 .+ exp(w * x));
-plot(x, y, 'y');
-hold on;
-
-
-w = 100;
-y = 1 ./ (1 .+ exp(w * x));
-plot(x, y, 'b');
-hold on;
+% 
+% w = 0.1;
+% y = 1 ./ (1 + exp(w * x));
+% plot(x, y, 'g');
+% hold on;
+% 
+% w = 5;
+% y = 1 ./ (1 + exp(w * x));
+% plot(x, y, 'y');
+% hold on;
+% 
+% 
+% w = 100;
+% y = 1 ./ (1 + exp(w * x));
+% plot(x, y, 'b');
+% hold on;
 
 pause;
 
